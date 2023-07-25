@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konoha Cafe</title>
+    <link rel="stylesheet" href="resources\css1.css">
+    <link rel="stylesheet" href="resources\css2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="icon" href="resources\images\favicon.jpg">
+    <style>
+        .items {
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .items>div {
+            height: 100%;
+            position: relative;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .items>img {
+            height: 170px;
+            border-radius: 10px;
+        }
+
+        .items>img {
+            height: 140px;
+            border-radius: 10px;
+        }
+
+        .items_block {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .items_block>div {
+            flex-grow: 1;
+        }
+
+        .blocks {
+            padding: 20px;
+            flex-grow: 1;
+            margin: 20px 30px;
+            box-shadow: 0 15px 40px -20px rgba(40, 44, 63);
+        }
+
+        input {
+            position: relative;
+            top: -25px;
+            right: -100px;
+            height: 40px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        input:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="infobar">
+            <div class="location"><a href="https://goo.gl/maps/zX6LdLWrG4cDfWos7" target="_blank"><img
+                        src="resources\images\location.png" alt="location" height="25px" width="25px"> Locate us here!</a>
+            </div>
+            <div class="right_nbar">
+
+                <div style="margin: 0px 25px;"> Email : konoha.hokage@gmail.com </div>
+                <div> Mobile Number: 3564124578 </div>
+            </div>
+        </div>
+
+        <div class="images">
+            <div class="main_logo"><img class="logo" src="resources\images\logo.png" alt="logo" height="320px"></div>
+            <div class="chibi1"><img class="chibi" src="resources\images\chibi.png" alt="chibi" height="200px"></div>
+            <div class="chibi2"><img class="chibi" src="resources\images\chibi1.gif" alt="chibi" height="270px"></div>
+        </div>
+    </div>
+    <section class="content">
+
+        <div>
+
+
+            <h2>Populars</h2>
+            <div class="pop_food">
+                <div class="blocks">
+                    <h3>Ichiraku Ramen</h3>
+                    <div class="items_block">
+                        <div class="items" id="r1">
+                            <img src="resources/images/ramen/ichiraku.jpg" alt="special item">
+                            <div style="display: inline-block;">
+                                Rs.250/- for one<br>
+                                Rs.400/- for two
+                            </div>
+                        </div>
+                        <div style="display: inline;">
+                            <input
+                                style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                                type="submit" name="submit" id="rd1" value="Order">
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks">
+                    <h3>Chicken Chilli Garlic Momos</h3>
+                    <div class="items_block">
+                        <div class="items" id="c10">
+                            <img src="resources/images/dumplings/chickengarlic.webp" alt="chinese food item">
+                            <div style="display: inline-block;">
+                                Rs.200/- for one<br>
+                                Rs.380/- for two
+                            </div>
+                        </div>
+                        <div style="display: inline;">
+                            <input
+                                style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                                type="submit" name="submit" id="c10" value="Order">
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks">
+                    <h3>Singapore-style Noodles</h3>
+                    <div class="items_block">
+                        <div class="items" id="c18">
+                            <img src="resources/images/noodles/singapore.jpg" alt="chinese food item">
+                            <div style="display: inline-block;">
+                                Rs.80/- for one<br>
+                                Rs.140/- for two
+                            </div>
+                        </div>
+                        <div style="display: inline;">
+                            <input
+                                style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                                type="submit" name="submit" id="c18" value="Order">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div>
+            <h2>Specials</h2>
+
+            <div class="pop_food">
+                <div class="blocks">
+                    <h3>Ichiraku Ramen</h3>
+                    <div class="items_block">
+                        <div class="items" id="r11">
+                            <img src="resources/images/ramen/ichiraku.jpg" alt="special item">
+                            <div style="display: inline-block;">
+                                Rs.250/- for one<br>
+                                Rs.400/- for two
+                            </div>
+                        </div>
+                        <div style="display: inline;">
+                            <input
+                                style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                                type="submit" name="submit" id="rd11" value="Order">
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks">
+                    <h3>Vanilla Mojito</h3>
+                    <div class="items_block">
+                        <div class="items" id="b11">
+                            <img src="resources/images/beverages/Mojito/vanila.jpg" alt="">
+                            <div style="display: inline-block;">
+                                Rs.110/- for one<br>
+                                Rs.200/- for two
+                            </div>
+                        </div>
+                        <div style="display: inline;">
+                            <input
+                                style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                                type="submit" name="submit" id="add" value="Order">
+                        </div>
+                    </div>
+                </div>
+                <div class="blocks">
+
+                    <h3>Peanut Chaat</h3>
+                    <div class="items_block">
+                        <div class="items" id="s4">
+                            <img src="resources/images/snacks/peanut.webp" alt="snacks">
+                            <div style="display: inline-block;">
+                                Rs.100/- for one<br>
+                                Rs.180/- for two
+                            </div>
+                        </div>
+                        <div style="display: inline;">
+                            <input
+                                style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                                type="submit" name="submit" id="sd4" value="Order">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <a href="resources/menu.html">
+            <div class="menu"> Full Menu </div>
+        </a>
+    </section>
+    <footer>
+        <h2 style="text-align: center;">About us</h2>
+        <div class="footer">
+            <div class="footer_content">
+                <h3>Socials</h3>
+                <a href="intagram">
+                    <img src="resources/images/insta.png" alt="inta icon" height="30px">
+                </a>
+                <a href="intagram">
+                    <img src="resources/images/twitter.png" alt="twitter icon" height="30px">
+                </a>
+                <a href="intagram">
+                    <img src="resources/images/facebook.png" alt="fb icon" height="30px">
+                </a>
+            </div>
+            <div class="footer_content" style="border-left: 1px solid white;">
+                <h3>Locations</h3>
+                | Bidoli | <br>
+                | Rajpur Road | <br>
+                | Premnagar |
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script>
+    var checkout1 = `    <form action="resources/checkout.php" name="r1" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="Ichiraku">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="r1" class="check" value="Checkout">
+                        </form>`
+    var checkout10 = `    <form action="resources/checkout.php" name="c10" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c10" class="check" value="Checkout">
+                        </form>`
+    var checkout18 = `    <form action="resources/checkout.php" name="c18" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c18" class="check" value="Checkout">
+                        </form>`
+    var checkout11 = `    <form action="resources/checkout.php" name="r11" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="Ichiraku">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="r11" class="check" value="Checkout">
+                        </form>`
+    var checkoutb11 = `    <form action="resources/checkout.php" name="b11" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b11" class="check" value="Checkout">
+                        </form>`
+    var checkout4 = `    <form action="resources/checkout.php" name="s4" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="peanut chaat">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="s4" class="check" value="Checkout">
+                        </form>`
+    $(document).ready(function () {
+        $("#r1").next().one("click", function () {
+            $("#r1").next().append(checkout1);
+        });
+        $("#c10").next().one("click", function () {
+            $("#c10").next().append(checkout10);
+        });
+        $("#c18").next().one("click", function () {
+            $("#c18").next().append(checkout18);
+        });
+        $("#r11").next().one("click", function () {
+            $("#r11").next().append(checkout11);
+        });
+        $("#b11").next().one("click", function () {
+            $("#b11").next().append(checkoutb11);
+        });
+        $("#s4").next().one("click", function () {
+            $("#s4").next().append(checkout4);
+        });
+    });
+</script>
+
+</html>
