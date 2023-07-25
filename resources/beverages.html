@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konoha Cafe</title>
+    <link rel="stylesheet" href="css3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .items {
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .items>div {
+            height: 100%;
+            position: relative;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .items>img {
+            height: 170px;
+            border-radius: 10px;
+        }
+
+        .items>img {
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .items_block {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .items_block>div {
+            flex-grow: 1;
+        }
+
+        .blocks {
+            padding: 20px;
+            flex-grow: 1;
+            margin: 20px 30px;
+            box-shadow: 0 15px 40px -20px rgba(40, 44, 63);
+        }
+
+        input {
+            position: relative;
+            top: -25px;
+            right: -100px;
+            height: 40px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        input:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="margin: 30px 30px 10px 30px; text-align:center;">Beverages</h2>
+
+    <div style="display: flex; flex-direction: column;">
+        <div class="blocks">
+            <h3>Plain Coffee</h3>
+            <div class="items_block">
+                <div class="items" id="b1">
+                    <img src="images/beverages/Coffee/coffee1.jpg" alt="coffee1">
+                    <div style="display: inline-block;">
+                        Rs.50/- for one<br>
+                        Rs.90/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Cold Coffee</h3>
+            <div class="items_block">
+                <div class="items" id="b2">
+                    <img src="images/beverages/Coffee/cc1.jpg" alt="cc1">
+                    <div style="display: inline-block;">
+                        Rs.80/- for one<br>
+                        Rs.150/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Cold Coffee with Icecream</h3>
+            <div class="items_block">
+                <div class="items" id="b3">
+                    <img src="images/beverages/Coffee/cc2.jpg" alt="cc2">
+                    <div style="display: inline-block;">
+                        Rs.100/- for one<br>
+                        Rs.190/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Mocha</h3>
+            <div class="items_block">
+                <div class="items" id="b4">
+                    <img src="images/beverages/Coffee/mocha.jpg" alt="mocha">
+                    <div style="display: inline-block;">
+                        Rs.70/- for one<br>
+                        Rs.130/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Capppuccino</h3>
+            <div class="items_block">
+                <div class="items" id="b5">
+                    <img src="images/beverages/Coffee/capa.jpeg" alt="capa">
+                    <div style="display: inline-block;">
+                        Rs.70/- for one<br>
+                        Rs.130/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Elaichi Chai</h3>
+            <div class="items_block">
+                <div class="items" id="b6">
+                    <img src="images/beverages/Chai/c1.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.40/- for one<br>
+                        Rs.70/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Adrak Chai</h3>
+            <div class="items_block">
+                <div class="items" id="b7">
+                    <img src="images/beverages/Chai/adchai.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.40/- for one<br>
+                        Rs.70/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Masala Chai</h3>
+            <div class="items_block">
+                <div class="items" id="b8">
+                    <img src="images/beverages/Chai/Masala-Tea.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.40/- for one<br>
+                        Rs.70/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Virgin Mojito</h3>
+            <div class="items_block">
+                <div class="items" id="b9">
+                    <img src="images/beverages/Mojito/virgin.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.100/- for one<br>
+                        Rs.190/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Blue Lagoon</h3>
+            <div class="items_block">
+                <div class="items" id="b10">
+                    <img src="images/beverages/Mojito/bluelagoon.jpeg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.110/- for one<br>
+                        Rs.210/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Vanilla Mojito</h3>
+            <div class="items_block">
+                <div class="items" id="b11">
+                    <img src="images/beverages/Mojito/vanila.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.110/- for one<br>
+                        Rs.200/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Black Current Shake</h3>
+            <div class="items_block">
+                <div class="items" id="b12">
+                    <img src="images/beverages/shakes/black.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.130/- for one<br>
+                        Rs.240/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Butterscoth Shake</h3>
+            <div class="items_block">
+                <div class="items" id="b13">
+                    <img src="images/beverages/shakes/butter.jpeg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.110/- for one<br>
+                        Rs.210/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Chocolate Shake</h3>
+            <div class="items_block">
+                <div class="items" id="b14">
+                    <img src="images/beverages/shakes/choco" alt="">
+                    <div style="display: inline-block;">
+                        Rs.100/- for one<br>
+                        Rs.190/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Kitkat Shake</h3>
+            <div class="items_block">
+                <div class="items" id="b15">
+                    <img src="images/beverages/shakes/kitkat.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.130/- for one<br>
+                        Rs.240/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Oreo Shake</h3>
+            <div class="items_block">
+                <div class="items" id="b16">
+                    <img src="images/beverages/shakes/ore.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.130/- for one<br>
+                        Rs.240/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Strawberry Shake</h3>
+            <div class="items_block">
+                <div class="items" id="b17">
+                    <img src="images/beverages/shakes/strawberry.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.110/- for one<br>
+                        Rs.210/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Vanilla Shake</h3>
+            <div class="items_block">
+                <div class="items" id="b18">
+                    <img src="images/beverages/shakes/vanilla.jpg" alt="">
+                    <div style="display: inline-block;">
+                        Rs.100/- for one<br>
+                        Rs.190/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="add" value="Order">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var checkout1 = `    <form action="checkout.php" name="b1" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b1" class="check" value="Checkout">
+                        </form>`
+    var checkout2 = `    <form action="checkout.php" name="b2" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b2" class="check" value="Checkout">
+                        </form>`
+    var checkout3 = `    <form action="checkout.php" name="b3" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b3" class="check" value="Checkout">
+                        </form>`
+    var checkout4 = `    <form action="checkout.php" name="b4" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name=b4" class="check" value="Checkout">
+                        </form>`
+    var checkout5 = `    <form action="checkout.php" name="b5" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b5" class="check" value="Checkout">
+                        </form>`
+    var checkout6 = `    <form action="checkout.php" name="b6" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b6" class="check" value="Checkout">
+                        </form>`
+    var checkout7 = `    <form action="checkout.php" name="b7" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b7" class="check" value="Checkout">
+                        </form>`
+    var checkout8 = `    <form action="checkout.php" name="b8" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b8" class="check" value="Checkout">
+                        </form>`
+    var checkout9 = `    <form action="checkout.php" name="b9" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b9" class="check" value="Checkout">
+                        </form>`
+    var checkout10 = `    <form action="checkout.php" name="b10" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b10" class="check" value="Checkout">
+                        </form>`
+    var checkout11 = `    <form action="checkout.php" name="b11" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b11" class="check" value="Checkout">
+                        </form>`
+    var checkout12 = `    <form action="checkout.php" name="b12" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b12" class="check" value="Checkout">
+                        </form>`
+    var checkout13 = `    <form action="checkout.php" name="b13" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b13" class="check" value="Checkout">
+                        </form>`
+    var checkout14 = `    <form action="checkout.php" name="b14" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b14" class="check" value="Checkout">
+                        </form>`
+    var checkout15 = `    <form action="checkout.php" name="b15" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b15" class="check" value="Checkout">
+                        </form>`
+    var checkout16 = `    <form action="checkout.php" name="b16" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b16" class="check" value="Checkout">
+                        </form>`
+    var checkout17 = `    <form action="checkout.php" name="b17" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b17" class="check" value="Checkout">
+                        </form>`
+    var checkout18 = `    <form action="checkout.php" name="b18" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="b18" class="check" value="Checkout">
+                        </form>`
+    $(document).ready(function () {
+        $("#b1").next().one("click", function () {
+            $("#b1").next().append(checkout1);
+        });
+        $("#b2").next().one("click", function () {
+            $("#b2").next().append(checkout2);
+        });
+        $("#b3").next().one("click", function () {
+            $("#b3").next().append(checkout3);
+        });
+        $("#b4").next().one("click", function () {
+            $("#b4").next().append(checkout4);
+        });
+        $("#b5").next().one("click", function () {
+            $("#b5").next().append(checkout5);
+        });
+        $("#b6").next().one("click", function () {
+            $("#b6").next().append(checkout6);
+        });
+        $("#b7").next().one("click", function () {
+            $("#b7").next().append(checkout7);
+        });
+        $("#b8").next().one("click", function () {
+            $("#b8").next().append(checkout8);
+        });
+        $("#b9").next().one("click", function () {
+            $("#b9").next().append(checkout9);
+        });
+        $("#b10").next().one("click", function () {
+            $("#b10").next().append(checkout10);
+        });
+        $("#b11").next().one("click", function () {
+            $("#b11").next().append(checkout11);
+        });
+        $("#b12").next().one("click", function () {
+            $("#b12").next().append(checkout12);
+        });
+        $("#b13").next().one("click", function () {
+            $("#b13").next().append(checkout13);
+        });
+        $("#b14").next().one("click", function () {
+            $("#b14").next().append(checkout14);
+        });
+        $("#b15").next().one("click", function () {
+            $("#b15").next().append(checkout15);
+        });
+        $("#b16").next().one("click", function () {
+            $("#b16").next().append(checkout16);
+        });
+        $("#b17").next().one("click", function () {
+            $("#b17").next().append(checkout17);
+        });
+        $("#b18").next().one("click", function () {
+            $("#b18").next().append(checkout18);
+        });
+    });
+</script>
+
+</html>

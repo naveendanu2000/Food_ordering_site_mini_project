@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konoha Cafe</title>
+    <link rel="stylesheet" href="css3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .items{
+            display: flex;
+            box-sizing: border-box;
+        }
+    
+        .items>div{
+            height: 100%;
+            position: relative;
+            margin-top:auto;
+            margin-bottom:auto;
+            padding-left:20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .items>img {
+            height: 170px;
+            border-radius: 10px;
+        }
+
+        .items_block {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .items_block>div {
+            flex-grow: 1;
+        }
+
+        .blocks {
+            padding: 30px 70px;
+            flex-grow: 1;
+            margin: 20px 30px;
+            box-shadow: 0 15px 40px -20px rgba(40, 44, 63);
+        }
+
+        input {
+            position: relative;
+            top: -25px;
+            right: -100px;
+            height: 40px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        input:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="margin: 30px 30px 10px 30px; text-align:center;">Specials</h2>
+
+    <div style="display: flex; flex-direction: column;">
+        <div class="blocks">
+            <h3>Ichiraku Ramen</h3>
+            <div class="items_block">
+                <div class="items" id="r1">
+                    <img src="images/ramen/ichiraku.jpg" alt="special item">
+                    <div style="display: inline-block;">
+                        Rs.250/- for one<br>
+                        Rs.400/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="rd1" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Cheese Spicy Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="r2">
+                    <img src="images/ramen/cheese.jpg" alt="special item">
+                    <div style="display: inline-block;">
+                        Rs.250/- for one<br>
+                        Rs.400/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="rd2" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Korean Fried Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="r3">
+                    <img src="images/ramen/korean.jpg" alt="special item">
+                    <div style="display: inline-block;">
+                        Rs.220/- for one<br>
+                        Rs.380/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="rd3" value="Order">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </form> -->
+</body>
+<script>
+    var checkout1 = `    <form action="checkout.php" name="r1" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="Ichiraku">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="r1" class="check" value="Checkout">
+                        </form>`
+    var checkout2 = `    <form action="checkout.php" name="r2" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="Cheese Spicy Noodles">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="r2" class="check" value="Checkout">
+                        </form>`
+    var checkout3 = `    <form action="checkout.php" name="r3" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="Korean Fried Noodles">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="r3" class="check" value="Checkout">
+                        </form>`
+    $(document).ready(function () {
+        $("#r1").next().one("click", function () {
+            $("#r1").next().append(checkout1);
+        });
+        $("#r2").next().one("click", function () {
+            $("#r2").next().append(checkout2);
+        });
+        $("#r3").next().one("click", function () {
+            $("#r3").next().append(checkout3);
+        });
+    });
+</script>
+
+</html>

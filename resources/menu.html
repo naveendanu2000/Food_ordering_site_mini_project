@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konoha Cafe</title>
+  <link rel="stylesheet" href="css2.css">
+  <link rel="stylesheet" href="css3.css">
+  <link rel="icon" href="images\favicon.jpg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <section style="box-shadow: 0 15px 40px -20px rgba(40, 44, 63); border-radius: 10px;">
+
+    <div class="menu">
+      <nav class="menu_top">
+        <div>
+          <img src="images/logo.png" alt="logo" height="130px"
+            style="flex-grow: 0; margin: 10px 10px 0px 10px; position: absolute;">
+        </div>
+        <div class="menu">
+          <h1 style="font-size:40px; padding: 0px 0px;">Menu</h1>
+        </div>
+      </nav>
+
+      <nav class="menu_bot">
+        <div id="beverages" onclick="change1()" style="background-color: rgb(255, 115, 35);">
+          <h3>Beverages</h2>
+        </div>
+        <div id="toast" onclick="change2()">
+          <h3>Toasts</h2>
+        </div>
+        <div id="chinese" onclick="change3()">
+          <h3>Chinese</h2>
+        </div>
+        <div id="specials" onclick="change4()">
+          <h3>KC Specials</h2>
+        </div>
+        <div id="snacks" onclick="change5()">
+          <h3>Snacks</h2>
+        </div>
+      </nav>
+    </div>
+
+    <div class="frame">
+      <div style="flex-grow: 2; height: 452px; padding: 0px 20px;">
+        <iframe id="content" src="beverages.html" height="100%" width="100%" frameborder="0"></iframe>
+      </div>
+  </section>
+
+  <script>
+    function change1() {
+      document.getElementById("content").src = "beverages.html";
+
+    }
+    function change2() {
+      document.getElementById("content").src = "toasts.html";
+    }
+    function change3() {
+      document.getElementById("content").src = "chinese.html";
+    }
+    function change4() {
+      document.getElementById("content").src = "specials.html";
+    }
+    function change5() {
+      document.getElementById("content").src = "snacks.html";
+    }
+
+    $(document).ready(function(){
+      $("#beverages").click(function(){
+        $(this).css("backgroundColor","rgb(255, 115, 35)");
+        $("#toast").css("backgroundColor","rgb(255, 255, 255)");
+        $("#chinese").css("backgroundColor","rgb(255, 255, 255)");
+        $("#specials").css("backgroundColor","rgb(255, 255, 255)");
+        $("#snacks").css("backgroundColor","rgb(255, 255, 255)");
+      });
+      $("#toast").click(function(){
+        $(this).css("backgroundColor","rgb(255, 115, 35)");
+        $("#beverages").css("backgroundColor","rgb(255, 255, 255)");
+        $("#chinese").css("backgroundColor","rgb(255, 255, 255)");
+        $("#specials").css("backgroundColor","rgb(255, 255, 255)");
+        $("#snacks").css("backgroundColor","rgb(255, 255, 255)");
+      });
+      $("#chinese").click(function(){
+        $(this).css("backgroundColor","rgb(255, 115, 35)");
+        $("#toast").css("backgroundColor","rgb(255, 255, 255)");
+        $("#beverages").css("backgroundColor","rgb(255, 255, 255)");
+        $("#specials").css("backgroundColor","rgb(255, 255, 255)");
+        $("#snacks").css("backgroundColor","rgb(255, 255, 255)");
+      });
+      $("#specials").click(function(){
+        $(this).css("backgroundColor","rgb(255, 115, 35)");
+        $("#toast").css("backgroundColor","rgb(255, 255, 255)");
+        $("#chinese").css("backgroundColor","rgb(255, 255, 255)");
+        $("#beverages").css("backgroundColor","rgb(255, 255, 255)");
+        $("#snacks").css("backgroundColor","rgb(255, 255, 255)");
+      });
+      $("#snacks").click(function(){
+        $(this).css("backgroundColor","rgb(255, 115, 35)");
+        $("#toast").css("backgroundColor","rgb(255, 255, 255)");
+        $("#chinese").css("backgroundColor","rgb(255, 255, 255)");
+        $("#specials").css("backgroundColor","rgb(255, 255, 255)");
+        $("#beverages").css("backgroundColor","rgb(255, 255, 255)");
+      });
+    });
+  </script>
+</body>
+
+</html>

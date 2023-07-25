@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konoha Cafe</title>
+    <link rel="stylesheet" href="css3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .items {
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .items>div {
+            height: 100%;
+            position: relative;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .items>img {
+            height: 170px;
+            border-radius: 10px;
+        }
+
+        .items>img {
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .items_block {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .items_block>div {
+            flex-grow: 1;
+        }
+
+        .blocks {
+            padding: 20px;
+            flex-grow: 1;
+            margin: 20px 30px;
+            box-shadow: 0 15px 40px -20px rgba(40, 44, 63);
+        }
+
+        input {
+            position: relative;
+            top: -25px;
+            right: -100px;
+            height: 40px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        input:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="margin: 30px 30px 10px 30px; text-align:center;">Chinese</h2>
+
+    <div style="display: flex; flex-direction: column;">
+
+        <div class="blocks">
+            <h3>Veg Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c1">
+                    <img src="images/dumplings/veg.jpeg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.50/- for one<br>
+                        Rs.80/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c1" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Veg Fried Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c2">
+                    <img src="images/dumplings/vegfried.webp" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.60/- for one<br>
+                        Rs.100/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c2" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Veg Chilli Garlic Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c3">
+                    <img src="images/dumplings/chiligarlick.jpg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.130/- for one<br>
+                        Rs.260/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c3" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Veg Tandoori Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c4">
+                    <img src="images/dumplings/tadnoori.jpeg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.160/- for one<br>
+                        Rs.300/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c4" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Paneer Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c5">
+                    <img src="images/dumplings/paneer.jpeg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.70/- for one<br>
+                        Rs.120/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c5" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Paneer Fried Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c6">
+                    <img src="images/dumplings/paneerfried.jpg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.80/- for one<br>
+                        Rs.130/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c6" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Paneer Chilli Garlic Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c7">
+                    <img src="images/dumplings/paneergarlic.jpeg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.150/- for one<br>
+                        Rs.280/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c7" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Chicken Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c8">
+                    <img src="images/dumplings/chicken.jpeg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.80/- for one<br>
+                        Rs.130/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c8" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Chicken Fried Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c9">
+                    <img src="images/dumplings/chickenfried.jpg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.90/- for one<br>
+                        Rs.150/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c9" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Chicken Chilli Garlic Momos</h3>
+            <div class="items_block">
+                <div class="items" id="c10">
+                    <img src="images/dumplings/chickengarlic.webp" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.200/- for one<br>
+                        Rs.380/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c10" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Veg Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="c11">
+                    <img src="images/noodles/veg.avif" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.50/- for one<br>
+                        Rs.80/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c11" value="Order">
+                </div>
+            </div>
+            <div class="blocks">
+            </div>
+            <h3>Egg Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="c12">
+                    <img src="images/noodles/egg.cms" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.60/- for one<br>
+                        Rs.100/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c12" value="Order">
+                </div>
+            </div>
+            <div class="blocks">
+            </div>
+            <h3>Paneer Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="c13">
+                    <img src="images/noodles/paneer.jpeg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.70/- for one<br>
+                        Rs.120/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c13" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Chicken Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="c14">
+                    <img src="images/noodles/chicken.jpeg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.80/- for one<br>
+                        Rs.140/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c14" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Veg Garlic Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="c15">
+                    <img src="images/noodles/garlic.jpeg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.60/- for one<br>
+                        Rs.100/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c15" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Chicken Hakka Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="c16">
+                    <img src="images/noodles/chickenhakka.jpg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.90/- for one<br>
+                        Rs.150/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c16" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Chicken Schezwan Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="c17">
+                    <img src="images/noodles/chickenschezwan.jpg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.100/- for one<br>
+                        Rs.170/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c17" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+            <h3>Singapore-style Noodles</h3>
+            <div class="items_block">
+                <div class="items" id="c18">
+                    <img src="images/noodles/singapore.jpg" alt="chinese food item">
+                    <div style="display: inline-block;">
+                        Rs.80/- for one<br>
+                        Rs.140/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="c18" value="Order">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var checkout1 = `    <form action="checkout.php" name="c1" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c1" class="check" value="Checkout">
+                        </form>`
+    var checkout2 = `    <form action="checkout.php" name="c2" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c2" class="check" value="Checkout">
+                        </form>`
+    var checkout3 = `    <form action="checkout.php" name="c3" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c3" class="check" value="Checkout">
+                        </form>`
+    var checkout4 = `    <form action="checkout.php" name="c4" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name=ct4" class="check" value="Checkout">
+                        </form>`
+    var checkout5 = `    <form action="checkout.php" name="c5" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c5" class="check" value="Checkout">
+                        </form>`
+    var checkout6 = `    <form action="checkout.php" name="c6" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c6" class="check" value="Checkout">
+                        </form>`
+    var checkout7 = `    <form action="checkout.php" name="c7" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c7" class="check" value="Checkout">
+                        </form>`
+    var checkout8 = `    <form action="checkout.php" name="c8" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c8" class="check" value="Checkout">
+                        </form>`
+    var checkout9 = `    <form action="checkout.php" name="c9" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c9" class="check" value="Checkout">
+                        </form>`
+    var checkout10 = `    <form action="checkout.php" name="c10" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c10" class="check" value="Checkout">
+                        </form>`
+    var checkout11 = `    <form action="checkout.php" name="c11" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c11" class="check" value="Checkout">
+                        </form>`
+    var checkout12 = `    <form action="checkout.php" name="c12" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c12" class="check" value="Checkout">
+                        </form>`
+    var checkout13 = `    <form action="checkout.php" name="c13" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c13" class="check" value="Checkout">
+                        </form>`
+    var checkout14 = `    <form action="checkout.php" name="c14" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c14" class="check" value="Checkout">
+                        </form>`
+    var checkout15 = `    <form action="checkout.php" name="c15" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c15" class="check" value="Checkout">
+                        </form>`
+    var checkout16 = `    <form action="checkout.php" name="c16" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c16" class="check" value="Checkout">
+                        </form>`
+    var checkout17 = `    <form action="checkout.php" name="c17" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c17" class="check" value="Checkout">
+                        </form>`
+    var checkout18 = `    <form action="checkout.php" name="c18" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="c18" class="check" value="Checkout">
+                        </form>`
+    $(document).ready(function () {
+        $("#c1").next().one("click", function () {
+            $("#c1").next().append(checkout1);
+        });
+        $("#c2").next().one("click", function () {
+            $("#c2").next().append(checkout2);
+        });
+        $("#c3").next().one("click", function () {
+            $("#c3").next().append(checkout3);
+        });
+        $("#c4").next().one("click", function () {
+            $("#c4").next().append(checkout4);
+        });
+        $("#c5").next().one("click", function () {
+            $("#c5").next().append(checkout5);
+        });
+        $("#c6").next().one("click", function () {
+            $("#c6").next().append(checkout6);
+        });
+        $("#c7").next().one("click", function () {
+            $("#c7").next().append(checkout7);
+        });
+        $("#c8").next().one("click", function () {
+            $("#c8").next().append(checkout8);
+        });
+        $("#c9").next().one("click", function () {
+            $("#c9").next().append(checkout9);
+        });
+        $("#c10").next().one("click", function () {
+            $("#c10").next().append(checkout10);
+        });
+        $("#c11").next().one("click", function () {
+            $("#c11").next().append(checkout11);
+        });
+        $("#c12").next().one("click", function () {
+            $("#c12").next().append(checkout12);
+        });
+        $("#c13").next().one("click", function () {
+            $("#c13").next().append(checkout13);
+        });
+        $("#c14").next().one("click", function () {
+            $("#c14").next().append(checkout14);
+        });
+        $("#c15").next().one("click", function () {
+            $("#c15").next().append(checkout15);
+        });
+        $("#c16").next().one("click", function () {
+            $("#c16").next().append(checkout16);
+        });
+        $("#c17").next().one("click", function () {
+            $("#c17").next().append(checkout17);
+        });
+        $("#c18").next().one("click", function () {
+            $("#c18").next().append(checkout18);
+        });
+    });
+</script>
+
+</html>

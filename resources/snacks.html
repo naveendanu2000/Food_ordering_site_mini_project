@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konoha Cafe</title>
+    <link rel="stylesheet" href="css3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .items {
+            display: flex;
+            box-sizing: border-box;
+        }
+
+        .items>div {
+            height: 100%;
+            position: relative;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .items>img {
+            height: 170px;
+            border-radius: 10px;
+        }
+
+        .items>img {
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        .items_block {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .items_block>div {
+            flex-grow: 1;
+        }
+
+        .blocks {
+            padding: 20px;
+            flex-grow: 1;
+            margin: 20px 30px;
+            box-shadow: 0 15px 40px -20px rgba(40, 44, 63);
+        }
+
+        input {
+            position: relative;
+            top: -25px;
+            right: -100px;
+            height: 40px;
+            width: 150px;
+            font-size: 15px;
+        }
+
+        input:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="margin: 30px 30px 10px 30px; text-align:center;">Snacks</h2>
+
+    <div style="display: flex; flex-direction: column;">
+        <div class="blocks">
+            <h3>Chilli Chicken</h3>
+            <div class="items_block">
+                <div class="items" id="s1">
+                    <img src="images/snacks/chicken.webp" alt="snacks">
+                    <div style="display: inline-block;">
+                        Rs.200/- for one<br>
+                        Rs.380/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="sd1" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+
+            <h3>French Fries</h3>
+            <div class="items_block">
+                <div class="items" id="s2">
+                    <img src="images/snacks/fries.webp" alt="snacks">
+                    <div style="display: inline-block;">
+                        Rs.120/- for one<br>
+                        Rs.200/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="sd2" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+
+            <h3>Chilli Paneer</h3>
+            <div class="items_block">
+                <div class="items" id="s3">
+                    <img src="images/snacks/paneer.jpg" alt="snacks">
+                    <div style="display: inline-block;">
+                        Rs.150/- for one<br>
+                        Rs.230/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="sd3" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+
+            <h3>Peanut Chaat</h3>
+            <div class="items_block">
+                <div class="items" id="s4">
+                    <img src="images/snacks/peanut.webp" alt="snacks">
+                    <div style="display: inline-block;">
+                        Rs.100/- for one<br>
+                        Rs.180/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="sd4" value="Order">
+                </div>
+            </div>
+        </div>
+        <div class="blocks">
+
+            <h3>Peri Peri Fries</h3>
+            <div class="items_block">
+                <div class="items" id="s5">
+                    <img src="images/snacks/peri peri.jpeg" alt="snacks">
+                    <div style="display: inline-block;">
+                        Rs.150/- for one<br>
+                        Rs.280/- for two
+                    </div>
+                </div>
+                <div style="display: inline;">
+                    <input
+                        style="border: none; font-weight: bold; background-color: rgb(255, 115, 35); border-radius: 5px;"
+                        type="submit" name="submit" id="sd5" value="Order">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var checkout1 = `    <form action="checkout.php" name="s1" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="chilli chicken">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="s1" class="check" value="Checkout">
+                        </form>`
+    var checkout2 = `    <form action="checkout.php" name="s2" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="french fries">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="s2" class="check" value="Checkout">
+                        </form>`
+    var checkout3 = `    <form action="checkout.php" name="s3" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="chilli paneer">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="s3" class="check" value="Checkout">
+                        </form>`
+    var checkout4 = `    <form action="checkout.php" name="s4" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="peanut chaat">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="s4" class="check" value="Checkout">
+                        </form>`
+    var checkout5 = `    <form action="checkout.php" name="s5" target="_blank" method="post">
+                        <input type="tel" maxlength="1" placeholder="Quantity (max 9)" name="peri peri fries">
+                        <br>                       
+                        <input type="tel" maxlength="10" placeholder="Mobile Number" name="phone number">                       
+                            <br>
+                        <input
+                        style="border: none; font-weight: bold; background-color: rgb(10, 96, 255); border-radius: 5px;"
+                        type="submit" name="s5" class="check" value="Checkout">
+                        </form>`
+    $(document).ready(function () {
+        $("#s1").next().one("click", function () {
+            $("#s1").next().append(checkout1);
+        });
+        $("#s2").next().one("click", function () {
+            $("#s2").next().append(checkout2);
+        });
+        $("#s3").next().one("click", function () {
+            $("#s3").next().append(checkout3);
+        });
+        $("#s4").next().one("click", function () {
+            $("#s4").next().append(checkout4);
+        });
+        $("#s5").next().one("click", function () {
+            $("#s5").next().append(checkout5);
+        });
+    });
+</script>
+
+</html>

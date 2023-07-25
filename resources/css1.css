@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+.header {
+    background-color: rgb(255, 115, 35);
+    height: 360px;
+    padding: 10px;
+    margin: 10px 0px;
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63);
+}
+
+.infobar {
+    color: white;
+    background-color: rgb(23, 104, 255);
+    height: 30px;
+    display: flex;
+    margin: 0px -10px;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.location {
+    margin-left: 10px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.right_nbar {
+    margin: 0px 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.images {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.main_logo {
+    flex-grow: 30;
+}
+
+.chibi1 {
+    flex-grow: 30;
+    animation: 0.5s ease-out 0s 1 slide1;
+    position: relative;
+    left: 230px;
+}
+
+@keyframes slide1 {
+    0% {
+        transform: translateY(+100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.chibi2 {
+    flex-grow: 1;
+    animation: 1s ease-out 0s 1 slide2;
+    position: relative;
+    left: 50px;
+}
+
+@keyframes slide2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.content {
+    box-shadow: 0 10px 40px -20px rgba(40, 44, 63);
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 90%;
+    margin: -5% 2.8%;
+    top: 48.25%;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+
+.pop_food {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.item {
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .60);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.f_item {
+    flex-grow: 1;
+}
+
+.number {
+    display: flex;
+    flex-direction: row;
+}
+
+.submit {
+    padding: 0px 2.5px;
+}
+
+.quantity {
+    padding: 0px 4px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu {
+    background-color: rgb(10, 96, 255);
+    margin: 20px -30px -30px -30px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    border: 2px solid white;
+}
+
+footer {
+
+    position: relative;
+    color: white;
+    background-color: black;
+    margin: 8% 0% 0% 0%;
+    padding: 20px;
+}
+
+.footer {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer_content {
+    flex-grow: 2;
+    text-align: center;
+}

@@ -1,0 +1,37 @@
+.menu_top {
+    background-color: rgb(255, 115, 35);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu_top>div {
+    flex-grow: 1;
+}
+
+.menu_bot {
+    display: flex;
+}
+
+.menu_bot>div {
+    box-shadow: 0 15px 40px -20px rgba(40, 44, 63, .60);
+    flex-grow: 1;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.menu_bot>div:hover {
+    background: rgb(73, 167, 255);
+    padding: 0 30px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.frame {
+    justify-content: center;
+}
